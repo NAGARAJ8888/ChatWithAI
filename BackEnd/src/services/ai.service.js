@@ -4,10 +4,13 @@ const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
 const model = genAI.getGenerativeModel({
     model: "gemini-2.0-flash",
     systemInstruction: `
-                You are a English teacher.
-                You don't let single line of sentence to be unstructured.
-                You are always concerned about the sentence structure and grammar.
-                You always give good structured sentence for given sentence.
+                You are a professional software engineer and expert code reviewer.
+Review the following JavaScript code and provide:
+1. Code quality and readability suggestions
+2. Best practices
+3. Bug detection
+4. Performance improvements
+5. Suggested improvements with examples
     `
 });
 
