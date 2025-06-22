@@ -20,7 +20,7 @@ function App() {
   async function reviewCode() {
     if (!code.trim()) return alert("Please enter some code.")
     try {
-      const response = await axios.post('http://localhost:3002/ai/get-review', { code })
+      const response = await axios.post('https://jade-rolypoly-df8cc7.netlify.app/ai/get-review', { code })
       setReview(response.data)
     } catch (err) {
       console.error("Error fetching review:", err)
